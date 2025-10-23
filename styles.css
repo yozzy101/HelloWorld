@@ -23,7 +23,8 @@ header h1 {
 	color: #ffffff;
 }
 
-main {
+/* CHANGED: Switched from the "main" tag selector to the "#main-content" ID selector */
+#main-content {
 	max-width: 800px;
 	margin: 20px auto;
 	padding: 25px;
@@ -112,4 +113,12 @@ nav a {
 
 nav a:hover {
 	text-decoration: underline;
+}
+
+/* ADDED: This new class selector styles all sections with "class=list-section" */
+.list-section {
+	background-color: #f8f8f8;
+	border: 1px solid #e0e0e0;
+	border-radius: 5px;
+	padding: 20px;
 }
