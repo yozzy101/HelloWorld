@@ -4,49 +4,55 @@ body {
 	font-family: Arial, sans-serif;
 	font-size: 16px;
 	line-height: 1.5;
-	background-color: #f4f4f4;
+	background-color: #f4f4f4; 
 	color: #333;
 }
 
 header {
-	background-color: #2c3e50;
-	color: #ffffff;
-	padding: 20px 40px;
+	background-color: #233140; 
+  	color: #ffffff;
+  	padding: 20px 40px; 
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	text-align: center:
 }
 
 header h1 {
 	margin: 0;
-	font-size: 2.5em; 
-}
+	font-size: 2.5em;
 
 main {
 	max-width: 800px;
-	margin: 0 auto;
-	padding: 20px;
+	margin: 20px auto;
+	padding: 25px;
+	background-color: #ffffff;
+	border-radius: 8px; 
+	box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
 }
 
 section {
 	margin-bottom: 25px; 
-	padding-bottom: 25px; 
+	padding-bottom: 25px;
 	border-bottom: 1px solid #eeeeee; 
+}
+
+section:last-of-type {
+	border-bottom: none;
+	margin-bottom: 0;
 }
 
 section h2, section h3 {
 	margin-top: 0;
-	color: #3498db; 
+	color: #2c76ac; 
 }
 
 a {
-	color: #3498db;
-	text-decoration: none; 
+	color: #2c76ac; 
+	text-decoration: none;
 }
 
 a:hover {
-	text-decoration: underline; 
+	text-decoration: underline;
 }
 
 ul, ol {
@@ -59,7 +65,7 @@ li {
 
 figure {
 	float: right;
-	margin: 0 0 15px 15px;
+	margin: 0 0 15px 15px; 
 	width: 190px;
 }
 
@@ -77,9 +83,33 @@ figcaption {
 }
 
 footer {
-	background-color: #2c3e50;
+	background-color: #233140; 
 	color: #ffffff;
 	padding: 20px;
 	text-align: center;
 	margin-top: 30px;
+}
+
+/* --- Navigation Menu Styles --- */
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+}
+
+nav li {
+	margin-left: 25px;
+}
+
+nav a {
+	color: #ffffff; 
+	text-decoration: none; 
+	font-weight: bold;
+	font-size: 0.9em;
+}
+
+nav a:hover {
+	text-decoration: underline;
 }
