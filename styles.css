@@ -23,7 +23,6 @@ header h1 {
 	color: #ffffff;
 }
 
-/* CHANGED: Switched from the "main" tag selector to the "#main-content" ID selector */
 #main-content {
 	max-width: 800px;
 	margin: 20px auto;
@@ -66,14 +65,16 @@ li {
 	margin-bottom: 8px;
 }
 
-figure {
+/* NEW CLASS: Replaces the inline style from the HTML */
+.side-image {
 	float: right;
 	margin: 0 0 15px 15px;
 	width: 190px;
 }
 
+/* REQUIREMENT 2: Fluid Images */
 img {
-	max-width: 100%;
+	max-width: 100%; /* Ensures image shrinks if container gets small */
 	height: auto;
 	border-radius: 5px;
 }
@@ -115,10 +116,40 @@ nav a:hover {
 	text-decoration: underline;
 }
 
-/* ADDED: This new class selector styles all sections with "class=list-section" */
 .list-section {
 	background-color: #f8f8f8;
 	border: 1px solid #e0e0e0;
 	border-radius: 5px;
 	padding: 20px;
+}
+
+/* --- REQUIREMENT 3: CSS Media Queries --- */
+@media (max-width: 768px) {
+	
+	/* Stack the Header */
+	header {
+		flex-direction: column;
+		gap: 15px;
+		padding: 20px;
+	}
+
+	/* Stack the Navigation */
+	nav ul {
+		flex-direction: column;
+		align-items: center;
+		gap: 10px;
+	}
+
+	nav li {
+		margin-left: 0;
+	}
+
+	/* Stack the Image (Multicolumn -> Single Column) */
+	.side-image {
+		float: none;
+		display: block;
+		margin: 0 auto 20px auto;
+		width: 100%;
+		max-width: 300px;
+	}
 }
